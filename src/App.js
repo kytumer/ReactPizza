@@ -2,22 +2,24 @@ import React from 'react';
 import './scss/app.scss';
 import Header from './components/Header';
 import Home from './pages/Home';
-import Cart from './pages/Cart';
+import Cart from './pages/Cart/Cart';
 import { Routes, Route } from 'react-router-dom';
+
 
 export const SearchContext = React.createContext();
 
 function App() {
 
+
+  
+
   //Search
+
   const [search, setSearch] = React.useState('');
-  const onChangeSearch = (event) => {
-    setSearch(event.target.value)
-  };
 
   return (
     <div className="wrapper">
-      <SearchContext.Provider value={{ search, onChangeSearch }}>
+      <SearchContext.Provider value={{ search,  setSearch}}>
         <Header />
         <div className="content">
           <Routes>

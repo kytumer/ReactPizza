@@ -1,17 +1,17 @@
 import React from 'react'
-import emptycart from '../assets/img/empty-cart.png'
+import imagine from './../../assets/img/empty-cart.png'
 
-const Cart = () => {
+const CartEmpty = () => {
     return (
-        <div class="container container--cart">
-            <div class="cart cart--empty">
-                <h2>Корзина пустая <icon>😕</icon></h2>
+        <div className="container container--cart">
+            <div className="cart cart--empty">
+                <h2>Корзина пустая 😕</h2>
                 <p>
                     Вероятней всего, вы не заказывали ещё пиццу.<br />
                     Для того, чтобы заказать пиццу, перейди на главную страницу.
                 </p>
-                <img src={emptycart} alt="Empty cart" />
-                <a href="/" class="button button--black">
+                <img src={imagine} alt="Empty cart" />
+                <a href="/" className="button button--black">
                     <span>Вернуться назад</span>
                 </a>
             </div>
@@ -19,4 +19,4 @@ const Cart = () => {
     )
 }
 
-export default Cart;
+export default CartEmpty

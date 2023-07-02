@@ -2,19 +2,21 @@ import { createSlice } from "@reduxjs/toolkit"
 
 
 const initialState = {
-    categoryIndex: 0,
+    selectedSort : 0
 }
 
 const sortSlice = createSlice({
-    name: 'category',
+    name: 'sort',
     initialState,
-    reducers : {
-        setCategoryIndex (state, action) {
-            state.categoryIndex = action.payload
+    reducers: {
+        setSelectedSort(state, action) {
+            state.selectedSort = action.payload
         }
     }
 })
 
-export const {setCategoryIndex} = sortSlice.actions;
+export const selectedSortSelector = state => state.sortSlice.selectedSort
+
+export const {setSelectedSort} = sortSlice.actions
 
 export default sortSlice.reducer;

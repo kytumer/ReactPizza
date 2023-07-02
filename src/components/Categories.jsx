@@ -1,6 +1,6 @@
 import React from "react";
-import { useSelector, useDispatch  } from "react-redux";
-import { setCategoryIndex } from "../redux/slices/sortSlice";
+
+
 
 
 
@@ -8,7 +8,7 @@ const categories = ['Все', 'Мясные', 'Вегетарианская', '�
 
 const Categories = ({categoryIndex, onCkickIndex }) => {
 
-    const category = useSelector(state => state.sortSlice.categoryIndex)
+
 
 
     return (
